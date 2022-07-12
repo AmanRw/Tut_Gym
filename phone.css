@@ -1,0 +1,61 @@
+/* Navigation */
+#logo{
+   position: relative;
+   justify-content: center;
+}
+#navbar{
+   flex-direction: column;
+ 
+}
+#navbar ul li a{
+   font-size: 10px;
+   align-items: center;
+   justify-content: left;
+   padding: 0px;
+   margin: 10px;
+
+}
+
+#ctr {
+   position: fixed;
+   justify-content: center;
+   display: flex;
+   top: 109px;
+   left: 1rem;
+}
+body{
+   background-size: 360%;
+   padding: 18px;
+   margin: 1px
+}
+.con{
+   width: 150px;
+   justify-content: center;
+   margin: 27px 54px;
+    padding: 43px;
+}
+.con h1{
+   font-size: 1rem;
+}
+.con1{
+   padding: 7px;
+   margin:  14px -13px ;
+   width: 288px;
+}
+.form-group input{
+   width: auto;
+   font-size: 10px;
+}
+.con button{
+   width: 150px;
+   font-size: 75%;
+}
+.btn{
+   font-size: 10px;
+   margin: 2px;
+   padding: 2px;
+}
+.center{
+   position: relative;
+   justify-items: baseline;
+}

@@ -1,0 +1,171 @@
+/* CSS REset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    height: 670px;
+}
+
+
+/* Logo */
+#logo {
+    margin: 9px 34px;
+    width: 100px;
+    top: 0px;
+    left: 10px;
+    position: fixed;
+    justify-content: left;
+    align-items: center;
+}
+
+#logo img {
+    height: 58px;
+    width: 80px;
+    filter: invert(100%);
+}
+
+/* Navbar */
+#navbar {
+    align-items: center;
+    display: flex;
+
+}
+
+#navbar ul {
+    display: flex;
+
+
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    justify-content: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 10%;
+    width: 100%;
+    z-index: -1;
+    opacity: 47%;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    display: flex;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: rgb(243, 7, 7);
+}
+
+#navbar ul li a:hover,
+#navbar li a.active {
+    text-decoration: underline;
+    color: gray;
+}
+
+.con1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: 2px solid white;
+    margin: 150px 84px;
+    padding: 38px;
+    width: 80%;
+    border-radius: 20px;
+}
+
+#ctr{
+    position: fixed;
+    justify-content: center;
+    display: flex;
+    top: 10px;
+    left: 10rem;
+}
+
+#right {
+    position: fixed;
+    justify-content: right;
+    right: 10px;
+    top: 10px;
+    display: flex;
+}
+
+
+
+/* Body CSS */
+body {
+    font-family: 'Baloo Bhai', cursive;
+    color: white;
+    background: url("sven-mieke-jO6vBWX9h9Y-unsplash.jpg") no-repeat center center/cover;
+    background-size: 100%;
+}
+
+/* Container */
+.con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    margin: 120px 89px;
+    padding: 39px;
+    width: 40%;
+    border-radius: 20px;
+}
+
+.con h1 {
+    font-size: 2.0rem;
+}
+
+.form-group input {
+
+    font-family: 'Baloo Bhai', cursive;
+    margin: 5px 3px;
+    text-align: center;
+    display: block;
+    width: 508px;
+    padding: 1px;
+    border: 2px solid red;
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+.con button {
+    display: block;
+    width: 510px;
+    font-size: 120%;
+
+}
+
+
+/* Button */
+.btn {
+
+    font-family: 'Baloo Bhai', cursive;
+    position: relative;
+    top: 25px;
+    font-size: 18px;
+    margin: 2px 3px;
+    padding: 6px 15px;
+    background-color: #0e0e0e;
+    color: #d00505;
+    border: 2px solid #dc0d0d;
+    border-radius: 9px;
+}
+
+.btn:hover {
+
+    background-color: gray;
+}
+
+.center {
+    text-align: center;
+    justify-content: end;
+}
