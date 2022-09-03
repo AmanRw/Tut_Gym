@@ -216,6 +216,7 @@ form .btn2{
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
+    color: #fff;
 }
 .copyright{
     width: 100%;
@@ -287,4 +288,10 @@ nav .fa-solid{
         font-size: 14px;
     }
 
+}
+
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
 }

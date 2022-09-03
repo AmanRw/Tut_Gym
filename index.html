@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gym Project</title>
-   <link rel="stylesheet" href="style.css">
-   <script src="https://kit.fontawesome.com/16820d4791.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png">
+    <script src="https://kit.fontawesome.com/16820d4791.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div id="header">
         <div class="container">
             <nav>
-                <img src="/logo.png" alt="LOGO" class="logo">
+                <img src="logo.png" alt="LOGO" class="logo">
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -24,7 +27,8 @@
             </nav>
             <div class="header-text">
                 <H1></H1><span>BUILD</span> YOUR BODY <br> <span>TRANSFORM</span> YOUR LIFE</H1>
-                <p>WE PROVIDE OUR BEST OPPORTUNITY AND QUALIFIED <br> TRAINERS FOR BEST WORKOUT YOURSELF AS YOU WANT!</p>
+                <p>WE PROVIDE OUR BEST OPPORTUNITY AND QUALIFIED <br> TRAINERS FOR BEST WORKOUT YOURSELF AS YOU WANT!
+                </p>
                 <button type="button" class="btn"> <a href="#contact">FREE TRY-OUT TRAINING</a></button>
             </div>
         </div>
@@ -35,7 +39,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="/download.jpg" alt="WORKOUT" srcset="">
+                    <img src="download.jpg" alt="WORKOUT" srcset="">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
@@ -43,16 +47,19 @@
                         temporibus vero mollitia nemo? Quos, maiores laborum. Nisi laboriosam repellendus cupiditate,
                         reprehenderit sunt recusandae accusantium veritatis aperiam dignissimos numquam? Unde debitis
                         rerum necessitatibus, quis, deleniti officiis rem, blanditiis beatae numquam cumque aliquid
-                        illum? Quo, tempora cum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum maxime saepe officia enim voluptas distinctio rerum expedita dolores assumenda aperiam nostrum eveniet laboriosam debitis excepturi necessitatibus, impedit, et, eligendi iusto consequatur similique ratione voluptatibus.  </p>
+                        illum? Quo, tempora cum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum maxime
+                        saepe officia enim voluptas distinctio rerum expedita dolores assumenda aperiam nostrum eveniet
+                        laboriosam debitis excepturi necessitatibus, impedit, et, eligendi iusto consequatur similique
+                        ratione voluptatibus. </p>
 
                 </div>
             </div>
         </div>
     </div>
 
-     <!-- ----------------------Services--------------------- -->
+    <!-- ----------------------Services--------------------- -->
 
-     <div id="services">
+    <div id="services">
         <div class="container">
             <h1 class="sub-title">My Services</h1>
             <div class="services-list">
@@ -84,8 +91,8 @@
         </div>
     </div>
 
-     <!-- ----------------------Contact--------------------- -->
-     <div id="contact">
+    <!-- ----------------------Contact--------------------- -->
+    <div id="contact">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
@@ -100,32 +107,55 @@
                     </div>
                 </div>
                 <div class="contact-right">
-                    <form action="" name="submit-to-google-sheet">
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" placeholder="Your Email" required>
                         <input type="text" name="Address" placeholder="Your Address" required>
                         <textarea name="Message" rows="5" placeholder="Your Message"></textarea>
-                        <button type="button" class="btn btn2">Submit</button>
+                        <button type="submit" class="btn btn2">Submit</button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
 
         <div class="copyright">
-            <p>Copyright <i class="fa-solid fa-copyright"></i> Aman .Made <i class="fa-solid fa-heart"></i> with by Tutorials</p>
+            <p>Copyright <i class="fa-solid fa-copyright"></i> Aman .Made <i class="fa-solid fa-heart"></i> with by
+                Tutorials</p>
         </div>
     </div>
 
     <script>
         var sidemenu = document.getElementById("sidemenu");
-        function openmenu(){
+        function openmenu() {
             sidemenu.style.right = "0";
         }
-        function closemenu(){
+        function closemenu() {
             sidemenu.style.right = "-200px";
         }
     </script>
 
 
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyqHMRfLPW1P20ZOjLmzQP8eDveEsHMJrN9ISufMYBbZNYeA62CDUJ5K6W1i-PwC2eT-w/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function(){
+                        msg.innerHTML = ""
+                    },5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+
 </body>
+
 </html>
